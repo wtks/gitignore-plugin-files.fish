@@ -1,0 +1,1 @@
+# gitignore-plugin-files.fish
