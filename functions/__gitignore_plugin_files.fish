@@ -18,7 +18,7 @@ function gitignore-plugin-files
         set --local files $$files_var
 
         for file in $files
-            set file (string replace $__fish_config_dir/ '' $file)
+            set file (string replace $__fish_config_dir/ '' (string replace '~' $HOME $file))
             switch $file
                 case 'completions/*'
                     echo (string replace completions/ '' $file) >> $gitignore_comp
